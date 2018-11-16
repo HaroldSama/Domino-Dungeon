@@ -16,10 +16,10 @@ public class GreateSets : MonoBehaviour {
 		
 	}
 	
-		public void OnMouseDown()
+		public void OnMouseUp()
 	{
 		print("Generate " + name);
-		GameObject set = Instantiate(Resources.Load<GameObject>("Prefabs/SetNormalX")); //create a new ball
+		GameObject set = Instantiate(Resources.Load<GameObject>("Prefabs/" + name)); //create a new Set
 		
 		Sets.Add(set);
 	}
