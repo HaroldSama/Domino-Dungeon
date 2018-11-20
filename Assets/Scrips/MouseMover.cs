@@ -35,10 +35,10 @@ public class MouseMover : MonoBehaviour
 		}
 	}
 
-	void OnMouseUp() //called when you click on this gameObject w/ physics
+	/*void OnMouseUp() //called when you click on this gameObject w/ physics
 	{
 		print("Placed");
 		//GameObject.Find("Starting Block").GetComponent<Push>().enabled = true;
 		isSelected = true;  //turn isSelected on
-	}
+	}*/
 }

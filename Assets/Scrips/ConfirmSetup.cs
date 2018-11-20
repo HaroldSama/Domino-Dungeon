@@ -19,6 +19,14 @@ public class ConfirmSetup : MonoBehaviour {
 	{
 		print("Confirm Setup");
 		GameObject.Find("Starting Block").GetComponent<Push>().Setup = true;
+		
+		GameObject[] Sets = GameObject.FindGameObjectsWithTag("Set");
+		Debug.Log(Sets.Length);
+		for (int i = 0; i < Sets.Length; i++)
+		{
+			Sets[i].GetComponent<MeshCollider>().enabled = false;
+		}
+		
 		GameObject[] Dominos = GameObject.FindGameObjectsWithTag("Domino");
 		Debug.Log(Dominos.Length);
 		for (int i = 0; i < Dominos.Length; i++)
