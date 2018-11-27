@@ -19,7 +19,7 @@ public class MouseMoverSnap : MonoBehaviour
 	// Update is called once per frame
 	void Update ()
 	{
-		if (isSelected) // if the ball is selected
+		if (isSelected) // if the set is selected
 		{
 			//get the position of the mouse and convert it to unity units
 			Vector3 mouseWorldPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
@@ -33,57 +33,58 @@ public class MouseMoverSnap : MonoBehaviour
             mouseWorldPos.z = Mathf.RoundToInt(mouseWorldPos.z / 2);
             mouseWorldPos.z = mouseWorldPos.z * 2;
 			
-			 //change the z position to be the right plane
-			
 			transform.position = mouseWorldPos; //move the transform position to be the mouse world position
 
         
 
-			if (Input.GetMouseButtonDown(0)) // if someone clicks while the ball is selected
+			if (Input.GetMouseButtonDown(0)) 
 			{
-				if (Placed == false)
+				if (Placed == false && Blocked == false)
 				{
-					isSelected = false; //make it unselected
+					isSelected = false;
+					//GetComponentInChildren<MeshCollider>().enabled = true;
 				}
 			}
 		}
 		
 			
-		if (Input.GetMouseButtonUp(0)) // if someone clicks while the ball is selected		
+		if (Input.GetMouseButtonUp(0)) 
 		{
     		if (isSelected == false)
     		{
-    			Placed = true; //make it unselected
+    			Placed = true; 
     		}
     
     	}
 	}
 	
-	void OnCollisionEnter(Collision col) 
+	void OnTriggerEnter(Collider other)
 	{
+		print(other.name);
 		print("Can't put here!");
 		Blocked = true;
 	}
 	
-	void OnCollisionExit(Collision col) 
+	void OnTriggerExit(Collider other) 
 	{
 		print("Can put here!");
 		Blocked = false;
 	}
 
-	void OnMouseDown() //called when you click on this gameObject w/ physics
+	void OnMouseDown() 
 	{
 		if (Placed)
 		{
-			isSelected = true; //turn isSelected on
+			isSelected = true; 
+			//GetComponentInChildren<MeshCollider>().enabled = false;
 		}
 	}
 
-	void OnMouseUp() //called when you click on this gameObject w/ physics
+	void OnMouseUp() 
 	{
 		if (isSelected)
 		{
-			Placed = false; //turn isSelected on
+			Placed = false; 
 		}
 		//GameObject.Find("Starting Block").GetComponent<Push>().enabled = true;
 		
