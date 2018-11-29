@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -16,6 +17,7 @@ public class Push : MonoBehaviour
 	
 	}
 	
+	//if the starting block is pushed
 	public void OnMouseDown()
 	{
 		if (Setup)
@@ -23,6 +25,7 @@ public class Push : MonoBehaviour
 			print("Got a click");
             GetComponent<Rigidbody>().isKinematic = false;
             GetComponent<Rigidbody>().AddForceAtPosition(-transform.forward * Force, transform.position + FPosAdjust, ForceMode.Impulse);
+			Setup = false;
 		}			
 	}
 

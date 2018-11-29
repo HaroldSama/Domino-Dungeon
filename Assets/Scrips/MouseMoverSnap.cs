@@ -8,8 +8,8 @@ public class MouseMoverSnap : MonoBehaviour
 {
 
 	public bool isSelected = true;
-	public bool Blocked = false;
-	public bool Placed = false;
+	public bool Blocked = true;
+	public bool Placed;
 	
 	// Use this for initialization
 	void Start () {
@@ -21,10 +21,10 @@ public class MouseMoverSnap : MonoBehaviour
 	{
 		if (isSelected) // if the set is selected
 		{
-			//get the position of the mouse and convert it to unity units
-			Vector3 mouseWorldPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+			
+			Vector3 mouseWorldPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);//get the position of the mouse and convert it to unity units
 
-//			print(mouseWorldPos);
+           //print(mouseWorldPos);
 			mouseWorldPos.x = mouseWorldPos.x - mouseWorldPos.y * 0.5f;
 			mouseWorldPos.z = mouseWorldPos.z - mouseWorldPos.y * 0.5f;
 			mouseWorldPos.y = 0;
@@ -36,13 +36,14 @@ public class MouseMoverSnap : MonoBehaviour
 			transform.position = mouseWorldPos; //move the transform position to be the mouse world position
 
         
-
+            //put the set down if mouse clicked
 			if (Input.GetMouseButtonDown(0)) 
 			{
 				if (Placed == false && Blocked == false)
 				{
 					isSelected = false;
-					//GetComponentInChildren<MeshCollider>().enabled = true;
+					GameObject.Find("Floating Control").GetComponent<FloatingControl>().Floating = false;
+					//gameObject.isStatic = true;
 				}
 			}
 		}
@@ -56,27 +57,52 @@ public class MouseMoverSnap : MonoBehaviour
     		}
     
     	}
-	}
-	
-	void OnTriggerEnter(Collider other)
-	{
-		print(other.name);
-		print("Can't put here!");
-		Blocked = true;
-	}
-	
-	void OnTriggerExit(Collider other) 
-	{
-		print("Can put here!");
-		Blocked = false;
-	}
+		
+		//print("Put here!");
+		//Blocked = false;
 
+		//if the domino set is within the tray
+		if (transform.position.x < 8 && transform.position.x > -2 && transform.position.z < 1 && transform.position.z > -9)
+		{
+			print("In the Range!");
+			Blocked = false;
+		}
+		else
+		{
+			print("Out of Range!");
+			Blocked = true;
+		}
+	}
+	
+	//Blocked when a domino set overlap with another one
+	void OnTriggerStay(Collider other)
+	{
+		if (other.CompareTag("Set") /*&& Vector3.Distance(other.transform.position, transform.position) < 1*/)
+		{
+			print(other.name);
+            print("Can't put here!");
+            Blocked = true;
+		}
+	}
+	
+	/*void OnTriggerExit(Collider other) 
+	{
+		if (other.CompareTag("Set"))
+		{
+			print(other.name);
+			print("Put here!");
+			Blocked = false;
+		}
+	}*/
+
+	//remove the placed set
 	void OnMouseDown() 
 	{
-		if (Placed)
+		if (Placed && GameObject.Find("Floating Control").GetComponent<FloatingControl>().Floating == false)
 		{
-			isSelected = true; 
-			//GetComponentInChildren<MeshCollider>().enabled = false;
+			isSelected = true;
+			GameObject.Find("Floating Control").GetComponent<FloatingControl>().Floating = true;
+			//gameObject.isStatic = false;
 		}
 	}
 

@@ -1,9 +1,13 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using ProBuilder2.Common;
 using UnityEngine;
 
-public class ConfirmSetup : MonoBehaviour {
+public class ConfirmSetup : MonoBehaviour
+{
+
+	public bool Resetting;
 
 	// Use this for initialization
 	void Start () {
@@ -15,6 +19,7 @@ public class ConfirmSetup : MonoBehaviour {
 		
 	}
 	
+	//if the confirm button is clicked
 	public void OnClick()
 	{
 		print("Confirm Setup");
@@ -33,7 +38,7 @@ public class ConfirmSetup : MonoBehaviour {
 		{
 			Dominos[i].GetComponent<MeshCollider>().enabled = true;
 			Dominos[i].GetComponent<Rigidbody>().isKinematic = false;
-		}//Enable physics of domino
+		}//Enable physics of dominos
 		
 		GameObject[] UIs = GameObject.FindGameObjectsWithTag("UI");
 		Debug.Log(UIs.Length);
@@ -41,6 +46,13 @@ public class ConfirmSetup : MonoBehaviour {
 		{
 			Destroy(UIs[i]);
 		}//Remove UI
+	}
+
+	//if the reset button is clicked
+	public void Reset()
+	{
+		print("Reset");
+		Resetting = true;
 	}
 	
 }
