@@ -202,8 +202,9 @@
         </e>
         <e p="Scrips" t="Include">
           <e p="ConfirmSetup.cs" t="Include" />
-          <e p="GreateSets.cs" t="Include" />
+          <e p="CreateSets.cs" t="Include" />
           <e p="MouseMover.cs" t="Include" />
+          <e p="MouseMoverSnap.cs" t="Include" />
           <e p="Push.cs" t="Include" />
         </e>
         <e p="SimplePhysicalShader" t="Include">
