@@ -42,7 +42,8 @@ public class CreateSets : MonoBehaviour {
 	//if the prefab is clicked
 	public void OnMouseUp()
 	{
-		if (Amount > 0)
+		if (Amount > 0 && 
+		    GameObject.Find("Floating Control").GetComponent<FloatingControl>().Floating == false)
 		{
 			print("Generate " + name);
     		GameObject set = Instantiate(Resources.Load<GameObject>("Prefabs/" + name)); //create a new Set

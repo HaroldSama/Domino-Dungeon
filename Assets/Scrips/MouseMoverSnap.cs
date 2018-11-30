@@ -25,7 +25,8 @@ public class MouseMoverSnap : MonoBehaviour
 		{
 			
 			Vector3 mouseWorldPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);//get the position of the mouse and convert it to unity units
-
+	
+		   //Debug.Log(Input.mousePosition + "   " + mouseWorldPos);
            //print(mouseWorldPos);
 			mouseWorldPos.x = mouseWorldPos.x - mouseWorldPos.y * 0.5f;
 			mouseWorldPos.z = mouseWorldPos.z - mouseWorldPos.y * 0.5f;

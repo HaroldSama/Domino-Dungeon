@@ -23,15 +23,14 @@ public class Winning : MonoBehaviour
 		if (StaticCount == StartPoint && ExitOpen == false)
 		{
 			StartCoroutine(waiterLose());
-
 		}
 
-		if (ExitOpen == true)
+		if (ExitOpen)
 		{
 			StartCoroutine(waiterWin());
 		}
 	}
-
+    
     void OnTriggerEnter(Collider other)
     {
 	    ExitOpen = false;

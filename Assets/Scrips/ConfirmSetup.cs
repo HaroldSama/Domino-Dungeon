@@ -8,6 +8,7 @@ public class ConfirmSetup : MonoBehaviour
 {
 
 	public bool Resetting;
+	public GameObject WinningDetector;
 
 	// Use this for initialization
 	void Start () {
@@ -25,6 +26,7 @@ public class ConfirmSetup : MonoBehaviour
 		print("Confirm Setup");
 		GameObject.Find("Starting Block").GetComponent<Push>().Setup = true;//Make the starting block able to be push
 		GameObject.Find("Starting Block").GetComponent<Push>().Fixed = true;//Make the sets unable to removed
+		WinningDetector.SetActive(true);//Active Winning Detect
 		
 		/*GameObject[] Sets = GameObject.FindGameObjectsWithTag("Set");
 		Debug.Log(Sets.Length);

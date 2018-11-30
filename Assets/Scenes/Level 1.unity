@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.0462925, g: 0.03772755, b: 0.01759578, a: 1}
+  m_IndirectSpecularColor: {r: 0.0036106035, g: 0.002920089, b: 0.0013619023, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1669,7 +1669,7 @@ Mesh:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: pb_Mesh15130
+  m_Name: pb_Mesh405732
   serializedVersion: 9
   m_SubMeshes:
   - serializedVersion: 2
@@ -3451,7 +3451,7 @@ Mesh:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: pb_Mesh13484
+  m_Name: pb_Mesh404046
   serializedVersion: 9
   m_SubMeshes:
   - serializedVersion: 2
@@ -40388,7 +40388,7 @@ Transform:
   m_GameObject: {fileID: 393446552}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -3, y: -3, z: 10}
-  m_LocalScale: {x: 0.9, y: 1, z: 0.9}
+  m_LocalScale: {x: 0.45, y: 0.5, z: 0.45}
   m_Children:
   - {fileID: 1950489312}
   - {fileID: 133688300}
@@ -44372,6 +44372,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Resetting: 0
+  WinningDetector: {fileID: 1419943712}
 --- !u!114 &458850884
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -58430,7 +58431,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 500, y: -150}
+  m_AnchoredPosition: {x: 480, y: -150}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &803627773
@@ -64645,6 +64646,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Resetting: 0
+  WinningDetector: {fileID: 0}
 --- !u!114 &983141541
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -69358,7 +69360,7 @@ Mesh:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: pb_Mesh13034
+  m_Name: pb_Mesh403588
   serializedVersion: 9
   m_SubMeshes:
   - serializedVersion: 2
@@ -87742,7 +87744,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1419943713
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -87985,6 +87987,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Resetting: 0
+  WinningDetector: {fileID: 0}
 --- !u!1 &1432300226
 GameObject:
   m_ObjectHideFlags: 0
