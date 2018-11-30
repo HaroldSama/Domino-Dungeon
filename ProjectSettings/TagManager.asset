@@ -7,6 +7,7 @@ TagManager:
   - Domino
   - Set
   - UI
+  - Brick
   layers:
   - Default
   - TransparentFX

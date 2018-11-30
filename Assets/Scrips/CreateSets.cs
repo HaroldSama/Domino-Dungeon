@@ -46,7 +46,7 @@ public class CreateSets : MonoBehaviour {
 		{
 			print("Generate " + name);
     		GameObject set = Instantiate(Resources.Load<GameObject>("Prefabs/" + name)); //create a new Set
-    		Amount = Amount - 1;
+    		Amount--;
     		GetComponentInChildren<Text>().text = "" + Amount;		
 			Sets.Add(set);
 			FloatingControl.GetComponent<FloatingControl>().Floating = true;
