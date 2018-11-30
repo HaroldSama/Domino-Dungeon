@@ -10,6 +10,8 @@ public class MouseMoverSnap : MonoBehaviour
 	public bool Blocked = true;
 	public bool Placed;
 	public bool WithinRange;
+	public float xdajust;
+	public float zadjust;
 	
 	// Use this for initialization
 	void Start () {
@@ -29,9 +31,9 @@ public class MouseMoverSnap : MonoBehaviour
 			mouseWorldPos.z = mouseWorldPos.z - mouseWorldPos.y * 0.5f;
 			mouseWorldPos.y = 0;
 			mouseWorldPos.x = Mathf.RoundToInt(mouseWorldPos.x / 2);
-            mouseWorldPos.x = mouseWorldPos.x * 2 - 1;
+            mouseWorldPos.x = mouseWorldPos.x * 2 - 1 + xdajust;
             mouseWorldPos.z = Mathf.RoundToInt(mouseWorldPos.z / 2);
-            mouseWorldPos.z = mouseWorldPos.z * 2;
+            mouseWorldPos.z = mouseWorldPos.z * 2 + zadjust;
 			
 			transform.position = mouseWorldPos; //move the transform position to be the mouse world position
 
