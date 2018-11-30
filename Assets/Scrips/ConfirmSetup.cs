@@ -24,6 +24,7 @@ public class ConfirmSetup : MonoBehaviour
 	{
 		print("Confirm Setup");
 		GameObject.Find("Starting Block").GetComponent<Push>().Setup = true;//Make the starting block able to be push
+		GameObject.Find("Starting Block").GetComponent<Push>().Fixed = true;//Make the sets unable to removed
 		
 		/*GameObject[] Sets = GameObject.FindGameObjectsWithTag("Set");
 		Debug.Log(Sets.Length);
@@ -38,7 +39,16 @@ public class ConfirmSetup : MonoBehaviour
 		{
 			Dominos[i].GetComponent<MeshCollider>().enabled = true;
 			Dominos[i].GetComponent<Rigidbody>().isKinematic = false;
+			//Dominos[i].GetComponent<MouseMoverSnap>().Fixed = true;
 		}//Enable physics of dominos
+		
+		GameObject[] Bricks = GameObject.FindGameObjectsWithTag("Brick");
+		Debug.Log(Bricks.Length);
+		for (int i = 0; i < Bricks.Length; i++)
+		{
+			Bricks[i].GetComponent<MeshCollider>().enabled = true;
+			Bricks[i].GetComponent<Rigidbody>().isKinematic = false;
+		}
 		
 		GameObject[] UIs = GameObject.FindGameObjectsWithTag("UI");
 		Debug.Log(UIs.Length);

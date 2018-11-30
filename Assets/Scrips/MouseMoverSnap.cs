@@ -2,7 +2,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using Vuforia;
 
 public class MouseMoverSnap : MonoBehaviour
 {
@@ -10,6 +9,7 @@ public class MouseMoverSnap : MonoBehaviour
 	public bool isSelected = true;
 	public bool Blocked = true;
 	public bool Placed;
+	public bool WithinRange;
 	
 	// Use this for initialization
 	void Start () {
@@ -39,7 +39,7 @@ public class MouseMoverSnap : MonoBehaviour
             //put the set down if mouse clicked
 			if (Input.GetMouseButtonDown(0)) 
 			{
-				if (Placed == false && Blocked == false)
+				if (Placed == false && Blocked == false && WithinRange)
 				{
 					isSelected = false;
 					GameObject.Find("Floating Control").GetComponent<FloatingControl>().Floating = false;
@@ -62,15 +62,28 @@ public class MouseMoverSnap : MonoBehaviour
 		//Blocked = false;
 
 		//if the domino set is within the tray
-		if (transform.position.x < 8 && transform.position.x > -2 && transform.position.z < 1 && transform.position.z > -9)
+		if (transform.position.x < 8 && 
+		    transform.position.x > -2 && 
+		    transform.position.z < 1 && 
+		    transform.position.z > -9)
 		{
-			print("In the Range!");
-			Blocked = false;
+			//print("In the Range!");
+			WithinRange = true;
 		}
 		else
 		{
-			print("Out of Range!");
-			Blocked = true;
+			//print("Out of Range!");
+			WithinRange = false;
+		}
+	}
+		
+	void OnTriggerExit(Collider other) 
+	{
+		if (other.CompareTag("Set"))
+		{
+			//print(other.name);
+			//print("Put here!");
+			Blocked = false;
 		}
 	}
 	
@@ -79,26 +92,18 @@ public class MouseMoverSnap : MonoBehaviour
 	{
 		if (other.CompareTag("Set") /*&& Vector3.Distance(other.transform.position, transform.position) < 1*/)
 		{
-			print(other.name);
-            print("Can't put here!");
+			//print(other.name);
+            //print("Can't put here!");
             Blocked = true;
 		}
 	}
 	
-	/*void OnTriggerExit(Collider other) 
-	{
-		if (other.CompareTag("Set"))
-		{
-			print(other.name);
-			print("Put here!");
-			Blocked = false;
-		}
-	}*/
-
 	//remove the placed set
 	void OnMouseDown() 
 	{
-		if (Placed && GameObject.Find("Floating Control").GetComponent<FloatingControl>().Floating == false)
+		if (Placed && 
+		    GameObject.Find("Floating Control").GetComponent<FloatingControl>().Floating == false && 
+		    GameObject.Find("Starting Block").GetComponent<Push>().Fixed == false)
 		{
 			isSelected = true;
 			GameObject.Find("Floating Control").GetComponent<FloatingControl>().Floating = true;
