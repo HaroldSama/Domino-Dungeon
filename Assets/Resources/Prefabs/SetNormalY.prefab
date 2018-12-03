@@ -580,7 +580,7 @@ MonoBehaviour:
   Blocked: 0
   Placed: 0
   WithinRange: 0
-  xdajust: 0.875
+  xadjust: 0.875
   zadjust: -0.875
 --- !u!114 &114609330389174164
 MonoBehaviour:
