@@ -40593,7 +40593,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Amount: 1
   FloatingControl: {fileID: 1188720178}
-  ResetButton: {fileID: 983141538}
 --- !u!1 &398566142
 GameObject:
   m_ObjectHideFlags: 0
@@ -44932,7 +44931,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9424978ac941df84799c72a173c6e915, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Resetting: 0
   WinningDetector: {fileID: 1419943712}
 --- !u!114 &458850884
 MonoBehaviour:
@@ -65871,7 +65869,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9424978ac941df84799c72a173c6e915, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Resetting: 0
   WinningDetector: {fileID: 0}
 --- !u!114 &983141541
 MonoBehaviour:
@@ -88712,7 +88709,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Amount: 1
   FloatingControl: {fileID: 1188720178}
-  ResetButton: {fileID: 983141538}
 --- !u!43 &1392106840
 Mesh:
   m_ObjectHideFlags: 0
@@ -90623,7 +90619,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9424978ac941df84799c72a173c6e915, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Resetting: 0
   WinningDetector: {fileID: 0}
 --- !u!1 &1432300226
 GameObject:
@@ -93047,7 +93042,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Amount: 2
   FloatingControl: {fileID: 1188720178}
-  ResetButton: {fileID: 983141538}
 --- !u!114 &1546849339
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -96841,7 +96835,7 @@ MonoBehaviour:
   m_Script: {fileID: 1980459831, guid: f70555f144d8491a825f0804e09c671c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 800, y: 600}
@@ -119935,7 +119929,7 @@ MonoBehaviour:
   m_Script: {fileID: 1980459831, guid: f70555f144d8491a825f0804e09c671c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 800, y: 600}
