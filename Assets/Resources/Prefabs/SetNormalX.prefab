@@ -877,3 +877,7 @@ MonoBehaviour:
   isSelected: 1
   Blocked: 0
   Placed: 0
+  WithinRange: 0
+  xadjust: 0
+  yadjust: 0
+  zadjust: 0

@@ -3,11 +3,12 @@ using System.Collections;
 using System.Collections.Generic;
 using ProBuilder2.Common;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class ConfirmSetup : MonoBehaviour
 {
 
-	public bool Resetting;
+	//public bool Resetting;
 	public GameObject WinningDetector;
 
 	// Use this for initialization
@@ -64,7 +65,14 @@ public class ConfirmSetup : MonoBehaviour
 	public void Reset()
 	{
 		print("Reset");
-		Resetting = true;
+		/*Resetting = true;
+		GameObject[] Sets = GameObject.FindGameObjectsWithTag("Set");
+		if (Sets.Length == 1)
+		{
+			Resetting = false;
+		}*/
+		
+		SceneManager.LoadScene(SceneManager.GetActiveScene().name, LoadSceneMode.Single);
 	}
 	
 }

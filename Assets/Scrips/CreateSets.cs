@@ -8,7 +8,7 @@ public class CreateSets : MonoBehaviour {
 	List<GameObject> Sets = new List<GameObject>();
 	public int Amount = 4;
 	public GameObject FloatingControl;
-	public GameObject ResetButton;
+	//public GameObject ResetButton;
 
 	// Use this for initialization
 	void Start () {
@@ -21,7 +21,7 @@ public class CreateSets : MonoBehaviour {
 	void Update () {
 
 		//if reset button is pressed
-		if (ResetButton.GetComponent<ConfirmSetup>().Resetting)
+		/*if (ResetButton.GetComponent<ConfirmSetup>().Resetting)
 		{
 			foreach(GameObject setstoRemove in FindObjectsOfType<GameObject>())
 			{
@@ -33,8 +33,8 @@ public class CreateSets : MonoBehaviour {
 			}
 			
 			GetComponentInChildren<Text>().text = "" + Amount;
-			ResetButton.GetComponent<ConfirmSetup>().Resetting = false;
-		}
+			//ResetButton.GetComponent<ConfirmSetup>().Resetting = false;
+		}*/
 		
 	}
 	
