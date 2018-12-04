@@ -25,8 +25,16 @@ public class ConfirmSetup : MonoBehaviour
 	public void OnClick()
 	{
 		print("Confirm Setup");
-		GameObject.Find("Starting Block").GetComponent<Push>().Setup = true;//Make the starting block able to be push
-		GameObject.Find("Starting Block").GetComponent<Push>().Fixed = true;//Make the sets unable to removed
+		foreach(GameObject StartingBlock in FindObjectsOfType<GameObject>())
+		{
+			if(StartingBlock.name == "Starting Block")
+			{
+				StartingBlock.GetComponent<Push>().Setup = true;
+				StartingBlock.GetComponent<Push>().Fixed = true;
+			}
+		}
+		//GameObject.Find("Starting Block").GetComponent<Push>().Setup = true;//Make the starting block able to be push
+		//GameObject.Find("Starting Block").GetComponent<Push>().Fixed = true;//Make the sets unable to removed
 		WinningDetector.SetActive(true);//Active Winning Detect
 		
 		/*GameObject[] Sets = GameObject.FindGameObjectsWithTag("Set");
