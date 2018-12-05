@@ -3,11 +3,12 @@ using System.Collections;
 using System.Collections.Generic;
 using ProBuilder2.Common;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class ConfirmSetup : MonoBehaviour
 {
 
-	public bool Resetting;
+	//public bool Resetting;
 	public GameObject WinningDetector;
 
 	// Use this for initialization
@@ -24,8 +25,16 @@ public class ConfirmSetup : MonoBehaviour
 	public void OnClick()
 	{
 		print("Confirm Setup");
-		GameObject.Find("Starting Block").GetComponent<Push>().Setup = true;//Make the starting block able to be push
-		GameObject.Find("Starting Block").GetComponent<Push>().Fixed = true;//Make the sets unable to removed
+		foreach(GameObject StartingBlock in FindObjectsOfType<GameObject>())
+		{
+			if(StartingBlock.name == "Starting Block")
+			{
+				StartingBlock.GetComponent<Push>().Setup = true;
+				StartingBlock.GetComponent<Push>().Fixed = true;
+			}
+		}
+		//GameObject.Find("Starting Block").GetComponent<Push>().Setup = true;//Make the starting block able to be push
+		//GameObject.Find("Starting Block").GetComponent<Push>().Fixed = true;//Make the sets unable to removed
 		WinningDetector.SetActive(true);//Active Winning Detect
 		
 		/*GameObject[] Sets = GameObject.FindGameObjectsWithTag("Set");
@@ -64,7 +73,14 @@ public class ConfirmSetup : MonoBehaviour
 	public void Reset()
 	{
 		print("Reset");
-		Resetting = true;
+		/*Resetting = true;
+		GameObject[] Sets = GameObject.FindGameObjectsWithTag("Set");
+		if (Sets.Length == 1)
+		{
+			Resetting = false;
+		}*/
+		
+		SceneManager.LoadScene(SceneManager.GetActiveScene().name, LoadSceneMode.Single);
 	}
 	
 }

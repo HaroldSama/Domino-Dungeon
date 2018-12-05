@@ -11,6 +11,7 @@ public class MouseMoverSnap : MonoBehaviour
 	public bool Placed;
 	public bool WithinRange;
 	public float xadjust;
+	public float yadjust;
 	public float zadjust;
 	
 	// Use this for initialization
@@ -30,7 +31,7 @@ public class MouseMoverSnap : MonoBehaviour
            //print(mouseWorldPos);
 			mouseWorldPos.x = mouseWorldPos.x - mouseWorldPos.y * 0.5f;
 			mouseWorldPos.z = mouseWorldPos.z - mouseWorldPos.y * 0.5f;
-			mouseWorldPos.y = 0;
+			mouseWorldPos.y = yadjust;
 			mouseWorldPos.x = Mathf.RoundToInt(mouseWorldPos.x / 2);
             mouseWorldPos.x = mouseWorldPos.x * 2 - 1 + xadjust;
             mouseWorldPos.z = Mathf.RoundToInt(mouseWorldPos.z / 2);
@@ -65,10 +66,10 @@ public class MouseMoverSnap : MonoBehaviour
 		//Blocked = false;
 
 		//if the domino set is within the tray
-		if (transform.position.x < 8 && 
-		    transform.position.x > -2 && 
-		    transform.position.z < 1 && 
-		    transform.position.z > -9)
+		if (transform.position.x < GameObject.Find("TraySize").GetComponent<TraySize>().xmax && 
+		    transform.position.x > GameObject.Find("TraySize").GetComponent<TraySize>().xmin && 
+		    transform.position.z < GameObject.Find("TraySize").GetComponent<TraySize>().zmax && 
+		    transform.position.z > GameObject.Find("TraySize").GetComponent<TraySize>().zmin)
 		{
 			//print("In the Range!");
 			WithinRange = true;
