@@ -31,9 +31,6 @@
         </e>
         <e p="Allsky" t="Include">
           <e p="allsky_readme.txt" t="Include" />
-          <e p="AllSkyDemoEnvironment" t="Include">
-            <e p="Specular Snow Vertex Colours.shader" t="Include" />
-          </e>
         </e>
         <e p="Ciconia Studio" t="Include">
           <e p="Shaders" t="Include">
