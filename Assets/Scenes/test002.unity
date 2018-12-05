@@ -10607,6 +10607,9 @@ MonoBehaviour:
   FPosAdjust: {x: 1, y: 3, z: 0}
   Force: 1000
   Setup: 0
+  Fixed: 0
+  SpeedTreshold: 0
+  WinningDetector: {fileID: 0}
 --- !u!1 &363831531
 GameObject:
   m_ObjectHideFlags: 0
@@ -12241,7 +12244,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Amount: 4
   FloatingControl: {fileID: 0}
-  ResetButton: {fileID: 0}
 --- !u!1 &413319824
 GameObject:
   m_ObjectHideFlags: 0
@@ -38034,7 +38036,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9424978ac941df84799c72a173c6e915, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Resetting: 0
+  WinningDetector: {fileID: 0}
 --- !u!1 &1432300226
 GameObject:
   m_ObjectHideFlags: 0

@@ -369,6 +369,7 @@
           <e p="LevelTitle.cs" t="Include" />
           <e p="MouseMoverSnap.cs" t="Include" />
           <e p="Push.cs" t="Include" />
+          <e p="TraySize.cs" t="Include" />
           <e p="Winning.cs" t="Include" />
         </e>
         <e p="SimplePhysicalShader" t="Include">
