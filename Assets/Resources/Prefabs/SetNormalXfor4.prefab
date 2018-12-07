@@ -46,7 +46,6 @@ GameObject:
   - component: {fileID: 54828242684086092}
   - component: {fileID: 114550287430219536}
   - component: {fileID: 82974954492532534}
-  - component: {fileID: 114571264448827188}
   m_Layer: 0
   m_Name: Domino
   m_TagString: Domino
@@ -504,18 +503,6 @@ MonoBehaviour:
   yadjust: 0
   zadjust: 0
 --- !u!114 &114550287430219536
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1230324060705492}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ff1727f7904b9344a8b41cdc0eaf5b9a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ParticleLauncher: {fileID: 0}
---- !u!114 &114571264448827188
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}

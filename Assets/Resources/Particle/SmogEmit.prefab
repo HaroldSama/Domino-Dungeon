@@ -21,6 +21,7 @@ GameObject:
   - component: {fileID: 4765738743804358}
   - component: {fileID: 198114940517433176}
   - component: {fileID: 199295406826524334}
+  - component: {fileID: 114490883264983596}
   m_Layer: 0
   m_Name: SmogEmit
   m_TagString: Untagged
@@ -41,6 +42,17 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
+--- !u!114 &114490883264983596
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1233253069694398}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 82f61907b6905084992ff8acb65aeefc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!198 &198114940517433176
 ParticleSystem:
   m_ObjectHideFlags: 1
