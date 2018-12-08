@@ -359,15 +359,16 @@
           </e>
         </e>
         <e p="Scrips" t="Include">
+          <e p="BackgroundMusic.cs" t="Include" />
           <e p="ConfirmSetup.cs" t="Include" />
           <e p="CreateSets.cs" t="Include" />
           <e p="FloatingControl.cs" t="Include" />
-          <e p="FreeY.cs" t="Include" />
           <e p="LevelManager.cs" t="Include" />
           <e p="LevelTitle.cs" t="Include" />
           <e p="MouseMoverSnap.cs" t="Include" />
           <e p="Push.cs" t="Include" />
           <e p="Smog.cs" t="Include" />
+          <e p="SmogDisappear.cs" t="Include" />
           <e p="TraySize.cs" t="Include" />
           <e p="Winning.cs" t="Include" />
         </e>

@@ -70,6 +70,7 @@ GameObject:
   - component: {fileID: 54755339713029754}
   - component: {fileID: 114639294698408572}
   - component: {fileID: 82869394794889642}
+  - component: {fileID: 65272866782637500}
   m_Layer: 0
   m_Name: SetWheelY
   m_TagString: Set
@@ -316,6 +317,18 @@ MeshCollider:
   m_CookingOptions: 14
   m_SkinWidth: 0.01
   m_Mesh: {fileID: 4300000, guid: 479f5cc204323d942bf72222346ae4f3, type: 2}
+--- !u!65 &65272866782637500
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1904843224530994}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.5, y: 0.5, z: 2.6}
+  m_Center: {x: 0, y: 2.3, z: -0.90000033}
 --- !u!82 &82368907619483842
 AudioSource:
   m_ObjectHideFlags: 1

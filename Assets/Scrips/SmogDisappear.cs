@@ -7,16 +7,10 @@ public class SmogDisappear : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		
-		StartCoroutine(waiterWin());
+		StartCoroutine(waiter());
 	}
-	
-	// Update is called once per frame
-	void Update ()
-	{
 
-	}
-	
-	IEnumerator waiterWin()
+	IEnumerator waiter()
 	{
 		yield return new WaitForSeconds(1);
 		Destroy(gameObject);	
