@@ -31,7 +31,7 @@ public class Winning : MonoBehaviour
 		}
 	}
     
-    void OnTriggerEnter(Collider other)
+    void OnTriggerStay(Collider other)
     {
 	    ExitOpen = false;
     }
@@ -43,13 +43,13 @@ public class Winning : MonoBehaviour
 
 	IEnumerator waiterLose()
 	{
-		yield return new WaitForSeconds(2);
+		yield return new WaitForSeconds(0);
 		Restart.SetActive(true);		
 	}
 	
 	IEnumerator waiterWin()
 	{
-		yield return new WaitForSeconds(3);
+		yield return new WaitForSeconds(0);
 		Next.SetActive(true);		
 	}
 }
