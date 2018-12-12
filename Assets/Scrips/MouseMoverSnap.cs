@@ -7,7 +7,7 @@ public class MouseMoverSnap : MonoBehaviour
 {
 
 	public bool isSelected = true;
-	public bool Blocked = true;
+	public bool Blocked;
 	public bool Placed;
 	public bool WithinRange;
 	public float xadjust;

@@ -22,7 +22,7 @@ public class ConfirmSetup : MonoBehaviour
 	}
 	
 	//if the confirm button is clicked
-	public void OnClick()
+	public void Confirm()
 	{
 		print("Confirm Setup");
 		foreach(GameObject StartingBlock in FindObjectsOfType<GameObject>())
@@ -45,7 +45,7 @@ public class ConfirmSetup : MonoBehaviour
 		}*///Disable the collider of domino sets
 		
 		GameObject[] Dominos = GameObject.FindGameObjectsWithTag("Domino");
-		Debug.Log(Dominos.Length);
+		//Debug.Log(Dominos.Length);
 		for (int i = 0; i < Dominos.Length; i++)
 		{
 			Dominos[i].GetComponent<MeshCollider>().enabled = true;
@@ -54,7 +54,7 @@ public class ConfirmSetup : MonoBehaviour
 		}//Enable physics of dominos
 		
 		GameObject[] Bricks = GameObject.FindGameObjectsWithTag("Brick");
-		Debug.Log(Bricks.Length);
+		//Debug.Log(Bricks.Length);
 		for (int i = 0; i < Bricks.Length; i++)
 		{
 			Bricks[i].GetComponent<MeshCollider>().enabled = true;
@@ -62,7 +62,7 @@ public class ConfirmSetup : MonoBehaviour
 		}
 		
 		GameObject[] UIs = GameObject.FindGameObjectsWithTag("UI");
-		Debug.Log(UIs.Length);
+		//Debug.Log(UIs.Length);
 		for (int i = 0; i < UIs.Length; i++)
 		{
 			Destroy(UIs[i]);

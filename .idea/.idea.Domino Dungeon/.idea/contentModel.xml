@@ -370,6 +370,8 @@
           <e p="LevelTitle.cs" t="Include" />
           <e p="MouseMoverSnap.cs" t="Include" />
           <e p="Push.cs" t="Include" />
+          <e p="SL.cs" t="Include" />
+          <e p="Sling.cs" t="Include" />
           <e p="Smog.cs" t="Include" />
           <e p="SmogDisappear.cs" t="Include" />
           <e p="TraySize.cs" t="Include" />

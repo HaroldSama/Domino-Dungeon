@@ -8,6 +8,7 @@ public class LevelManager : MonoBehaviour
 {
 
 	public int currentLevelNumber;
+	public GameObject SL;
 
 	void Start ()
 	{
@@ -21,6 +22,8 @@ public class LevelManager : MonoBehaviour
 	
 	public void Next()
 	{
+		SL = GameObject.Find("SL");
+		Destroy(SL);
 		SceneManager.LoadScene(currentLevelNumber + 1, LoadSceneMode.Single);
 	}
 

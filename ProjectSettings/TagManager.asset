@@ -8,6 +8,7 @@ TagManager:
   - Set
   - UI
   - Brick
+  - SL
   layers:
   - Default
   - TransparentFX

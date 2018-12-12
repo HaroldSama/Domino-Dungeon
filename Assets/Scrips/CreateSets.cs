@@ -13,13 +13,13 @@ public class CreateSets : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		
-	GetComponentInChildren<Text>().text = "" + Amount;	
-		
 	}
 	
 	// Update is called once per frame
 	void Update () {
 
+			GetComponentInChildren<Text>().text = "" + Amount;
+		
 		//if reset button is pressed
 		/*if (ResetButton.GetComponent<ConfirmSetup>().Resetting)
 		{
@@ -48,7 +48,7 @@ public class CreateSets : MonoBehaviour {
 			print("Generate " + name);
     		GameObject set = Instantiate(Resources.Load<GameObject>("Prefabs/" + name)); //create a new Set
     		Amount--;
-    		GetComponentInChildren<Text>().text = "" + Amount;		
+    		//GetComponentInChildren<Text>().text = "" + Amount;		
 			Sets.Add(set);
 			FloatingControl.GetComponent<FloatingControl>().Floating = true;
 		}
