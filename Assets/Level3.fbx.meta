@@ -115,7 +115,7 @@ ModelImporter:
     400106: wall2
     400108: wall3
     400110: walls
-    2100000: lambert1
+    2100000: lambert7
     2300000: brick1
     2300002: brick10
     2300004: brick11
@@ -219,46 +219,46 @@ ModelImporter:
     4300000: hallwayFloor
     4300002: hallwayWall2
     4300004: hallwaysWall1
-    4300006: wall1
-    4300008: wall3
-    4300010: wall2
-    4300012: ground
-    4300014: brick1
-    4300016: brick2
-    4300018: brick3
-    4300020: brick4
-    4300022: brick5
-    4300024: brick6
-    4300026: brick7
-    4300028: brick8
-    4300030: brick9
-    4300032: brick10
-    4300034: brick11
-    4300036: brick12
-    4300038: brick13
-    4300040: brick14
-    4300042: brick15
-    4300044: brick16
-    4300046: brick17
-    4300048: brick18
-    4300050: brick19
-    4300052: brick20
-    4300054: brick21
-    4300056: brick22
-    4300058: brick23
-    4300060: brick24
-    4300062: brick25
-    4300064: brick26
-    4300066: brick27
-    4300068: brick28
-    4300070: brick29
-    4300072: brick30
-    4300074: brick31
-    4300076: brick32
-    4300078: brick33
-    4300080: brick34
-    4300082: brick35
-    4300084: brick36
+    4300006: brick1
+    4300008: brick2
+    4300010: brick3
+    4300012: brick4
+    4300014: brick5
+    4300016: brick6
+    4300018: brick7
+    4300020: brick8
+    4300022: brick9
+    4300024: brick10
+    4300026: brick11
+    4300028: brick12
+    4300030: brick13
+    4300032: brick14
+    4300034: brick15
+    4300036: brick16
+    4300038: brick17
+    4300040: brick18
+    4300042: brick19
+    4300044: brick20
+    4300046: brick21
+    4300048: brick22
+    4300050: brick23
+    4300052: brick24
+    4300054: brick25
+    4300056: brick26
+    4300058: brick27
+    4300060: brick28
+    4300062: brick29
+    4300064: brick30
+    4300066: brick31
+    4300068: brick32
+    4300070: brick33
+    4300072: brick34
+    4300074: brick35
+    4300076: brick36
+    4300078: wall1
+    4300080: wall3
+    4300082: wall2
+    4300084: ground
     4300086: streetlight1
     4300088: streetlight2
     4300090: streetlight3
