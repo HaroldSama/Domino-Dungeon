@@ -16,7 +16,7 @@ public class MouseMoverSnap : MonoBehaviour
 	
 	// Use this for initialization
 	void Start () {
-		
+			
 	}
 	
 	// Update is called once per frame
@@ -47,6 +47,9 @@ public class MouseMoverSnap : MonoBehaviour
 				{
 					isSelected = false;
 					GameObject.Find("Floating Control").GetComponent<FloatingControl>().Floating = false;
+					GameObject smog = Instantiate(Resources.Load<GameObject>("Particle/SmogEmit"), mouseWorldPos + new Vector3(0, 0.5f, 0), new Quaternion(0,0,0,0));
+					//smog.transform.position = mouseWorldPos + new Vector3(0, 0.5f, 0);
+					GetComponent<AudioSource>().Play();
 					//gameObject.isStatic = true;
 				}
 			}
