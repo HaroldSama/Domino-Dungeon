@@ -1824,7 +1824,7 @@ Mesh:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: pb_Mesh28450
+  m_Name: pb_Mesh562864
   serializedVersion: 9
   m_SubMeshes:
   - serializedVersion: 2
@@ -57165,7 +57165,7 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RenderingLayerMask: 4294967295
   m_Materials:
-  - {fileID: 2100000, guid: 0fa5d7c6718adab46a1c45ad1a17ced3, type: 2}
+  - {fileID: 2100000, guid: 1e60d75f83ba7964c900b52736898ddc, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -67759,7 +67759,7 @@ Mesh:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: pb_Mesh67260
+  m_Name: pb_Mesh561054
   serializedVersion: 9
   m_SubMeshes:
   - serializedVersion: 2
@@ -82768,7 +82768,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1212641670}
   m_LocalRotation: {x: 0.7071068, y: -0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: 5, z: -0.4499998}
+  m_LocalPosition: {x: -0.00000023841858, y: 4.1100006, z: 0.2800007}
   m_LocalScale: {x: 0.45, y: 0.45000046, z: 0.5000005}
   m_Children: []
   m_Father: {fileID: 90134797}
@@ -82782,10 +82782,10 @@ Light:
   m_GameObject: {fileID: 1212641670}
   m_Enabled: 1
   serializedVersion: 8
-  m_Type: 0
+  m_Type: 2
   m_Color: {r: 0, g: 0.5019608, b: 1, a: 1}
-  m_Intensity: 5
-  m_Range: 6
+  m_Intensity: 10
+  m_Range: 4
   m_SpotAngle: 32
   m_CookieSize: 10
   m_Shadows:
@@ -87118,7 +87118,7 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RenderingLayerMask: 4294967295
   m_Materials:
-  - {fileID: 2100000, guid: 0fa5d7c6718adab46a1c45ad1a17ced3, type: 2}
+  - {fileID: 2100000, guid: 1e60d75f83ba7964c900b52736898ddc, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -102255,6 +102255,122 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _entityType: 0
+--- !u!1001 &1768900283
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4775377811844172, guid: 4745f2db67dd06f4aaa941211ec780e6, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4775377811844172, guid: 4745f2db67dd06f4aaa941211ec780e6, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4775377811844172, guid: 4745f2db67dd06f4aaa941211ec780e6, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 1.52
+      objectReference: {fileID: 0}
+    - target: {fileID: 4775377811844172, guid: 4745f2db67dd06f4aaa941211ec780e6, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4775377811844172, guid: 4745f2db67dd06f4aaa941211ec780e6, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4775377811844172, guid: 4745f2db67dd06f4aaa941211ec780e6, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4775377811844172, guid: 4745f2db67dd06f4aaa941211ec780e6, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4775377811844172, guid: 4745f2db67dd06f4aaa941211ec780e6, type: 2}
+      propertyPath: m_RootOrder
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 108458596779160214, guid: 4745f2db67dd06f4aaa941211ec780e6,
+        type: 2}
+      propertyPath: m_Color.r
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 108458596779160214, guid: 4745f2db67dd06f4aaa941211ec780e6,
+        type: 2}
+      propertyPath: m_Color.g
+      value: 0.2845006
+      objectReference: {fileID: 0}
+    - target: {fileID: 108458596779160214, guid: 4745f2db67dd06f4aaa941211ec780e6,
+        type: 2}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 108932799117743706, guid: 4745f2db67dd06f4aaa941211ec780e6,
+        type: 2}
+      propertyPath: m_Color.r
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 108932799117743706, guid: 4745f2db67dd06f4aaa941211ec780e6,
+        type: 2}
+      propertyPath: m_Color.g
+      value: 0.5019608
+      objectReference: {fileID: 0}
+    - target: {fileID: 108932799117743706, guid: 4745f2db67dd06f4aaa941211ec780e6,
+        type: 2}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 108932799117743706, guid: 4745f2db67dd06f4aaa941211ec780e6,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 108458596779160214, guid: 4745f2db67dd06f4aaa941211ec780e6,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 108793013433258984, guid: 4745f2db67dd06f4aaa941211ec780e6,
+        type: 2}
+      propertyPath: m_Color.r
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 108793013433258984, guid: 4745f2db67dd06f4aaa941211ec780e6,
+        type: 2}
+      propertyPath: m_Color.g
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 108793013433258984, guid: 4745f2db67dd06f4aaa941211ec780e6,
+        type: 2}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 108932799117743706, guid: 4745f2db67dd06f4aaa941211ec780e6,
+        type: 2}
+      propertyPath: m_Range
+      value: 10.07
+      objectReference: {fileID: 0}
+    - target: {fileID: 108932799117743706, guid: 4745f2db67dd06f4aaa941211ec780e6,
+        type: 2}
+      propertyPath: m_Intensity
+      value: 3.49
+      objectReference: {fileID: 0}
+    - target: {fileID: 1497705322389346, guid: 4745f2db67dd06f4aaa941211ec780e6, type: 2}
+      propertyPath: m_Name
+      value: Lights (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 108793013433258984, guid: 4745f2db67dd06f4aaa941211ec780e6,
+        type: 2}
+      propertyPath: m_Intensity
+      value: 1.5
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 4745f2db67dd06f4aaa941211ec780e6, type: 2}
+  m_IsPrefabAsset: 0
 --- !u!43 &1772390663
 Mesh:
   m_ObjectHideFlags: 0
@@ -109891,10 +110007,10 @@ Light:
   m_GameObject: {fileID: 1950489310}
   m_Enabled: 1
   serializedVersion: 8
-  m_Type: 0
+  m_Type: 2
   m_Color: {r: 0, g: 0.5019608, b: 1, a: 1}
-  m_Intensity: 5
-  m_Range: 6
+  m_Intensity: 10
+  m_Range: 4
   m_SpotAngle: 32
   m_CookieSize: 10
   m_Shadows:
@@ -109927,7 +110043,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1950489310}
   m_LocalRotation: {x: 0.7071068, y: -0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: 6, z: -1}
+  m_LocalPosition: {x: -0.0000005298191, y: 6, z: -0.051110588}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 393446558}
@@ -113486,7 +113602,7 @@ Mesh:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: pb_Mesh27446
+  m_Name: pb_Mesh561842
   serializedVersion: 9
   m_SubMeshes:
   - serializedVersion: 2
@@ -118890,7 +119006,7 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RenderingLayerMask: 4294967295
   m_Materials:
-  - {fileID: 2100000, guid: 0fa5d7c6718adab46a1c45ad1a17ced3, type: 2}
+  - {fileID: 2100000, guid: 1e60d75f83ba7964c900b52736898ddc, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -119681,7 +119797,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2122124069}
   m_LocalRotation: {x: 0.7071068, y: -0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: 4, z: -0.84375}
+  m_LocalPosition: {x: -0.00000023841858, y: 3.1200004, z: -0.38974953}
   m_LocalScale: {x: 0.45, y: 0.45000023, z: 0.50000024}
   m_Children: []
   m_Father: {fileID: 76357424}
@@ -119695,10 +119811,10 @@ Light:
   m_GameObject: {fileID: 2122124069}
   m_Enabled: 1
   serializedVersion: 8
-  m_Type: 0
+  m_Type: 2
   m_Color: {r: 0, g: 0.5019608, b: 1, a: 1}
-  m_Intensity: 5
-  m_Range: 6
+  m_Intensity: 10
+  m_Range: 4
   m_SpotAngle: 32
   m_CookieSize: 10
   m_Shadows:
