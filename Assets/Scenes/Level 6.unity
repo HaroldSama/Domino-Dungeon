@@ -44,7 +44,7 @@ RenderSettings:
 LightmapSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 11
-  m_GIWorkflowMode: 1
+  m_GIWorkflowMode: 0
   m_GISettings:
     serializedVersion: 2
     m_BounceScale: 1
@@ -89,8 +89,7 @@ LightmapSettings:
     m_PVRFilteringAtrousPositionSigmaIndirect: 2
     m_PVRFilteringAtrousPositionSigmaAO: 1
     m_ShowResolutionOverlay: 1
-  m_LightingDataAsset: {fileID: 112000120, guid: 10ec0c2b9e63d334d9d512b9ad8a8758,
-    type: 2}
+  m_LightingDataAsset: {fileID: 0}
   m_UseShadowmask: 1
 --- !u!196 &4
 NavMeshSettings:
@@ -47745,6 +47744,7 @@ GameObject:
   - component: {fileID: 534669904}
   - component: {fileID: 534669903}
   - component: {fileID: 534669906}
+  - component: {fileID: 534669907}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -47828,6 +47828,18 @@ LightProbeGroup:
   - {x: -9.185173, y: 6.7877946, z: 4.787794}
   - {x: -18.088636, y: 4.0587683, z: 20.108229}
   - {x: 2.034422, y: -10.110327, z: 3.8190053}
+--- !u!114 &534669907
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 534669902}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff26db721962cdf4a8edcdfa9a767d2a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  profile: {fileID: 11400000, guid: 44baf45e3fdc4e74ba7faf5b09734707, type: 2}
 --- !u!43 &535963678
 Mesh:
   m_ObjectHideFlags: 0
@@ -55227,7 +55239,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4199321195681800, guid: 0e08557efbb31ca42a2abd31b88dc115, type: 2}
       propertyPath: m_LocalPosition.z
-      value: -13.661177
+      value: -12.11
       objectReference: {fileID: 0}
     - target: {fileID: 4199321195681800, guid: 0e08557efbb31ca42a2abd31b88dc115, type: 2}
       propertyPath: m_LocalRotation.x
