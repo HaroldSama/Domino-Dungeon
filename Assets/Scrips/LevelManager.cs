@@ -12,8 +12,9 @@ public class LevelManager : MonoBehaviour
 
 	void Start ()
 	{
-		currentLevelNumber = SceneManager.GetActiveScene().buildIndex;	
-	}
+		currentLevelNumber = SceneManager.GetActiveScene().buildIndex;
+        PlayerPrefs.SetInt("LastestScene", currentLevelNumber);
+    }
 	
 	public void Reset()
 	{
@@ -24,7 +25,8 @@ public class LevelManager : MonoBehaviour
 	{
 		SL = GameObject.Find("SL");
 		Destroy(SL);
-		SceneManager.LoadScene(currentLevelNumber + 1, LoadSceneMode.Single);
+        PlayerPrefs.SetInt("PassedNum", ++currentLevelNumber);
+        SceneManager.LoadScene(currentLevelNumber, LoadSceneMode.Single);
 	}
 
 }
