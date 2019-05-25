@@ -86,7 +86,7 @@ public class MouseMoverSnap : MonoBehaviour
 		
 	void OnTriggerExit(Collider other) 
 	{
-		if (other.CompareTag("Set"))
+		if (other.CompareTag("Set") || other.CompareTag("Wall"))
 		{
 			//print(other.name);
 			//print("Put here!");
@@ -97,9 +97,9 @@ public class MouseMoverSnap : MonoBehaviour
 	//Blocked when a domino set overlap with another one
 	void OnTriggerStay(Collider other)
 	{
-		if (other.CompareTag("Set") /*&& Vector3.Distance(other.transform.position, transform.position) < 1*/)
+		if (other.CompareTag("Set") || other.CompareTag("Wall")/*&& Vector3.Distance(other.transform.position, transform.position) < 1*/)
 		{
-			//print(other.name);
+			print(other.name);
             //print("Can't put here!");
             Blocked = true;
 		}

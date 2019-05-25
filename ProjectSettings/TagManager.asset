@@ -9,6 +9,7 @@ TagManager:
   - UI
   - Brick
   - SL
+  - Wall
   layers:
   - Default
   - TransparentFX
