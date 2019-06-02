@@ -45,7 +45,7 @@ EditorBuildSettings:
     path: Assets/Scenes/Level 12 - Olympic.unity
     guid: 35a0106058520ee4c8fa03275830dc0d
   - enabled: 1
-    path: Assets/Scenes/Level 13 - Meet.unity
+    path: Assets/Scenes/Level 13 - Crash.unity
     guid: c2d72115bcb6d1640a9d746d25edc150
   - enabled: 1
     path: Assets/Scenes/Level 14 - Race.unity
@@ -56,4 +56,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/End.unity
     guid: 46783fbe0dace85468ab07757e2dacbe
+  - enabled: 1
+    path: Assets/Scenes/Choose.unity
+    guid: 6d6f864a97b146342ad32c3b91f000c8
   m_configObjects: {}

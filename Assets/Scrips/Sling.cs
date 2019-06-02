@@ -11,6 +11,7 @@ public class Sling : MonoBehaviour {
 	void Start ()
 	{
 		Sler = GameObject.Find("SL");
+		//print(1);
 		_sl = Sler.GetComponent<SL>();
 	}
 	
