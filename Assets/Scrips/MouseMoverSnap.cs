@@ -13,7 +13,18 @@ public class MouseMoverSnap : MonoBehaviour
 	public float xadjust;
 	public float yadjust;
 	public float zadjust;
-	
+
+	private TraySize _traySize;
+	private FloatingControl _floatingControl;
+	private AudioSource _audioSource;
+
+	private void Awake()
+	{
+		_traySize = GameObject.Find("TraySize").GetComponent<TraySize>();
+		_floatingControl = GameObject.Find("Floating Control").GetComponent<FloatingControl>();
+		_audioSource = GetComponent<AudioSource>();
+	}
+
 	// Use this for initialization
 	void Start () {
 			
@@ -46,10 +57,10 @@ public class MouseMoverSnap : MonoBehaviour
 				if (Placed == false && Blocked == false && WithinRange)
 				{
 					isSelected = false;
-					GameObject.Find("Floating Control").GetComponent<FloatingControl>().Floating = false;
+					_floatingControl.Floating = false;
 					GameObject smog = Instantiate(Resources.Load<GameObject>("Particle/SmogEmit"), mouseWorldPos + new Vector3(0, 0.5f, 0), new Quaternion(0,0,0,0));
 					//smog.transform.position = mouseWorldPos + new Vector3(0, 0.5f, 0);
-					GetComponent<AudioSource>().Play();
+					_audioSource.Play();
 					//gameObject.isStatic = true;
 				}
 			}
@@ -69,10 +80,10 @@ public class MouseMoverSnap : MonoBehaviour
 		//Blocked = false;
 
 		//if the domino set is within the tray
-		if (transform.position.x < GameObject.Find("TraySize").GetComponent<TraySize>().xmax && 
-		    transform.position.x > GameObject.Find("TraySize").GetComponent<TraySize>().xmin && 
-		    transform.position.z < GameObject.Find("TraySize").GetComponent<TraySize>().zmax && 
-		    transform.position.z > GameObject.Find("TraySize").GetComponent<TraySize>().zmin)
+		if (transform.position.x < _traySize.xmax && 
+		    transform.position.x > _traySize.xmin && 
+		    transform.position.z < _traySize.zmax && 
+		    transform.position.z > _traySize.zmin)
 		{
 			//print("In the Range!");
 			WithinRange = true;
@@ -109,11 +120,11 @@ public class MouseMoverSnap : MonoBehaviour
 	void OnMouseDown() 
 	{
 		if (Placed && 
-		    GameObject.Find("Floating Control").GetComponent<FloatingControl>().Floating == false && 
+		    _floatingControl.Floating == false && 
 		    GameObject.Find("Starting Block").GetComponent<Push>().Fixed == false)
 		{
 			isSelected = true;
-			GameObject.Find("Floating Control").GetComponent<FloatingControl>().Floating = true;
+			_floatingControl.Floating = true;
 			//gameObject.isStatic = false;
 		}
 	}

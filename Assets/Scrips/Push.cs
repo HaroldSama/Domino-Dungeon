@@ -17,6 +17,16 @@ public class Push : MonoBehaviour
 	public float SpeedTreshold;
 	public GameObject WinningDetector;
 
+	private List<Rigidbody> Dominos = new List<Rigidbody>();
+	private Rigidbody rb;
+	private Winning _winning;
+
+	private void Awake()
+	{
+		_winning = WinningDetector.GetComponent<Winning>();
+		rb = GetComponent<Rigidbody>();
+	}
+
 	// Use this for initialization
 	void Start()
 	{
@@ -34,6 +44,12 @@ public class Push : MonoBehaviour
 				ForceMode.Impulse);
 			Setup = false;
 			Pushed = true;
+			GameObject[] DominoObjs = GameObject.FindGameObjectsWithTag("Domino");
+			print(DominoObjs.Length);
+			for (int i = 0; i < DominoObjs.Length; i++)
+			{
+				Dominos.Add(DominoObjs[i].GetComponent<Rigidbody>());
+			}
 		}
 	}
 
@@ -42,27 +58,23 @@ public class Push : MonoBehaviour
 	void Update()
 	{
 		//start movement test
-		if (Pushed)
+		if (Pushed && rb.velocity.magnitude > SpeedTreshold)
 		{
-			
-			if (GetComponent<Rigidbody>().velocity.magnitude > SpeedTreshold)
-            {
-            	MovementTesting = true;
-	            print("Movement Testing");
-	            Pushed = false;
-            }
+			MovementTesting = true;
+			//print("Movement Testing");
+			Pushed = false;
 		}
-		
+
 		//movement test
 		if (MovementTesting)
 		{
 			//MovementTesting = false;
-    		GameObject[] Dominos = GameObject.FindGameObjectsWithTag("Domino");
-        	Debug.Log(Dominos.Length);
-			MovementCounts = Dominos.Length;
-		    for (int i = 0; i < Dominos.Length; i++)
+    		//GameObject[] Dominos = GameObject.FindGameObjectsWithTag("Domino");
+        	//Debug.Log(Dominos.Length);
+			MovementCounts = Dominos.Count;
+		    for (int i = 0; i < Dominos.Count; i++)
 		    {
-			    if (Dominos[i].GetComponent<Rigidbody>().velocity.magnitude > SpeedTreshold)
+			    if (Dominos[i].velocity.magnitude > SpeedTreshold)
 			    {
 				    print(Dominos[i].name);
 			    }
@@ -75,7 +87,7 @@ public class Push : MonoBehaviour
 			if (MovementCounts == 0)
 			{
 				MovementTesting = false;
-				WinningDetector.GetComponent<Winning>().StaticCount++;
+				_winning.StaticCount++;
 			}
 		}
 
