@@ -46,7 +46,7 @@ public class MouseMoverSnap : MonoBehaviour
 			mouseWorldPos.x = Mathf.RoundToInt(mouseWorldPos.x / 2);
             mouseWorldPos.x = mouseWorldPos.x * 2 - 1 + xadjust;
             mouseWorldPos.z = Mathf.RoundToInt(mouseWorldPos.z / 2);
-            mouseWorldPos.z = mouseWorldPos.z * 2 + zadjust;
+            mouseWorldPos.z = mouseWorldPos.z * 2 - 1 + zadjust;
 			
 			transform.position = mouseWorldPos; //move the transform position to be the mouse world position
 
