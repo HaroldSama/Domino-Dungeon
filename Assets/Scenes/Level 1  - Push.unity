@@ -72304,16 +72304,6 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: loading
       objectReference: {fileID: 0}
-    - target: {fileID: 114824401604748128, guid: bb60dd437a6b0b04c9723d5f78d0912f,
-        type: 3}
-      propertyPath: m_FontData.m_VerticalOverflow
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114824401604748128, guid: bb60dd437a6b0b04c9723d5f78d0912f,
-        type: 3}
-      propertyPath: m_FontData.m_HorizontalOverflow
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 2004620227250399040, guid: bb60dd437a6b0b04c9723d5f78d0912f,
         type: 3}
       propertyPath: m_RootOrder
@@ -72412,6 +72402,16 @@ PrefabInstance:
     - target: {fileID: 4220004513745677286, guid: bb60dd437a6b0b04c9723d5f78d0912f,
         type: 3}
       propertyPath: m_FontData.m_VerticalOverflow
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114824401604748128, guid: bb60dd437a6b0b04c9723d5f78d0912f,
+        type: 3}
+      propertyPath: m_FontData.m_VerticalOverflow
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114824401604748128, guid: bb60dd437a6b0b04c9723d5f78d0912f,
+        type: 3}
+      propertyPath: m_FontData.m_HorizontalOverflow
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -94174,7 +94174,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh34674
+  m_Name: pb_Mesh281896
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -110994,6 +110994,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 227109835}
     m_Modifications:
+    - target: {fileID: 1594076095675062, guid: 7962f01b068179a418c7c537d00a4970, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4973414607931380, guid: 7962f01b068179a418c7c537d00a4970, type: 3}
       propertyPath: m_LocalPosition.x
       value: 3
@@ -111024,10 +111028,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4973414607931380, guid: 7962f01b068179a418c7c537d00a4970, type: 3}
       propertyPath: m_RootOrder
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1594076095675062, guid: 7962f01b068179a418c7c537d00a4970, type: 3}
-      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
